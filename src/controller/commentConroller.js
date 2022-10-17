@@ -4,14 +4,7 @@ const Comment = require('../model/commentModel')
 
 const createcomment = async (req, res)=>{
     const {comment}= req.body
-    // console.log({comment});
-    // let emptyFields = []
-    // if (!comment) {
-    //     emptyFields.push("comment")
-    // }
-    // if (emptyFields.length > 0) {
-    //     return res.status(400).json({error: "please fill in all the fields", emptyFields})
-    // }
+   
     if(!comment){
        return res.status(401).json({error: "Pls write a comment"})
     }
