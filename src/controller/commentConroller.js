@@ -16,7 +16,6 @@ const createcomment = async (req, res)=>{
        return res.status(401).json({error: "Pls write a comment"})
     }
 
-    const id = req.params
     try {
         const  user_id  = req.user._id 
         const createdComment = await Comment.create({
