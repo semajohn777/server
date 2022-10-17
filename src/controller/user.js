@@ -61,15 +61,7 @@ const loginUser = async(req, res)=>{
     //  const user = await User.findOne({email})
      
      try {
-        //  if(user) {
-        //      const loginUser = await bycrpt.compare(password, user.password)
-        //      if (loginUser) {
-
-        //         const token = createToken(user._id)
-        //         return res.status(200).json({email, token})
-        //      }
-        // }
-        // return res.status(201).json("User does not exist")
+        
         const user = await User.login(email, password)
 
         const token = createToken(user._id)
